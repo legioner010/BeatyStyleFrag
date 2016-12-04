@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BeatyStyleFrag</string>
+
+    <string name="title_activity_nail">NailActivity</string>
+
+    <string name="logo">Beauty Style</string>
+    <string name="name_salon">Name_salon</string>
+    <string name="s_hair">Волосы</string>
+    <string name="s_nails">Ногти</string>
+    <string name="address">Адрес</string>
+    <string name="title_activity_adress">AdressActivity</string>
+    <string name="test">test</string>
+    <string name="title_activity_data">DataActivity</string>
+</resources>
