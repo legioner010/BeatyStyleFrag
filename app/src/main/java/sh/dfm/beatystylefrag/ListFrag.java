@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class ListFrag extends ListFragment {
 
     private ListFragListner listner;
-    private static  String listID = "";
+    private static String listID = "";
 
 
 
@@ -34,6 +34,7 @@ public class ListFrag extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        Log.e(" ListFrag  ","onCreateView listID= " +listID);
 
         if(listID.equals("nail")){
             String[] names = new String[Data.nails.length];
@@ -64,11 +65,11 @@ public class ListFrag extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        //super.onListItemClick(l, v, position, id);
-        listner.itemClicked(id, listID);
+        listner.itemClicked(id,listID);
     }
 
     public void setListID(String id) {
         this.listID = id;
+//        Log.e(" ListFrag  ","setListID id= " +id);
     }
 }

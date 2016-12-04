@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,8 +24,12 @@ public class DataActivityFrag extends AppCompatActivity  implements  ListFrag.Li
 
        String type_id = getIntent().getStringExtra(EXTRA_TYPE_ID);
        ListFrag listfrag = new ListFrag();
-       if(type_id.equals("nail"))listfrag.setListID("nail");
 
+       if(type_id.equals("nail")){
+           listfrag.setListID("nail");
+       }else{
+           listfrag.setListID("hair");
+       }
 
         setContentView(R.layout.activity_datafrag);
 
@@ -32,6 +37,8 @@ public class DataActivityFrag extends AppCompatActivity  implements  ListFrag.Li
 
     @Override
     public void itemClicked(long id, String listID) {
+        Log.e("DataActivityFrag","itemClicked = " +listID);
+
         View fragmentcontainer = findViewById(R.id.fragment_container);
         if(fragmentcontainer !=null){
             DetailFrag detail = new DetailFrag();
